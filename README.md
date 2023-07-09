@@ -22,3 +22,5 @@ Follow the steps below to install and run the Calculator application:
 5. git clone pycal link
 6. cd pycal
 7. python pycal.py
+   #pycal
+   author sumangal karan 
