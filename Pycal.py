@@ -1,46 +1,60 @@
-def add(num1, num2):
-    return num1 + num2
+def create_calculator_banner():
+    banner = """
+     ██████╗ ██████╗ ███╗   ██╗███████╗██████╗ ██████╗ ██████╗ ██╗   ██╗
+    ██╔════╝██╔═══██╗████╗  ██║██╔════╝██╔══██╗██╔══██╗██╔══██╗╚██╗ ██╔╝
+    ██║     ██║   ██║██╔██╗ ██║█████╗  ██████╔╝██████╔╝██║  ██║ ╚████╔╝ 
+    ██║     ██║   ██║██║╚██╗██║██╔══╝  ██╔══██╗██╔══██╗██║  ██║  ╚██╔╝  
+    ╚██████╗╚██████╔╝██║ ╚████║███████╗██║  ██║██║  ██║██████╔╝   ██║   
+     ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝    ╚═╝   
+    """
+    print(banner)
 
-def subtract(num1, num2):
-    return num1 - num2
+def add(x, y):
+    return x + y
 
-def multiply(num1, num2):
-    return num1 * num2
+def subtract(x, y):
+    return x - y
 
-def divide(num1, num2):
-    return num1 / num2
+def multiply(x, y):
+    return x * y
 
-# Get input from the user
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
+def divide(x, y):
+    if y != 0:
+        return x / y
+    else:
+        return "Error: Cannot divide by zero"
 
-# Prompt the user for the operation
-print("Select operation:")
-print("1. Addition")
-print("2. Subtraction")
-print("3. Multiplication")
-print("4. Division")
+# Call the function to display the calculator banner
+create_calculator_banner()
 
-# Get the user's choice of operation
-choice = input("Enter the operation number (1-4): ")
+# Main calculator loop
+while True:
+    print("Select operation:")
+    print("1. Add")
+    print("2. Subtract")
+    print("3. Multiply")
+    print("4. Divide")
+    print("0. Exit")
 
-# Perform the selected operation
-if choice == "1":
-    result = add(num1, num2)
-    operator = "+"
-elif choice == "2":
-    result = subtract(num1, num2)
-    operator = "-"
-elif choice == "3":
-    result = multiply(num1, num2)
-    operator = "*"
-elif choice == "4":
-    result = divide(num1, num2)
-    operator = "/"
-else:
-    print("Invalid choice")
-    exit()
+    choice = input("Enter your choice: ")
 
-# Display the result
-print(f"{num1} {operator} {num2} = {result}")
+    if choice == '0':
+        break
+
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+
+    if choice == '1':
+        print("Result:", add(num1, num2))
+    elif choice == '2':
+        print("Result:", subtract(num1, num2))
+    elif choice == '3':
+        print("Result:", multiply(num1, num2))
+    elif choice == '4':
+        print("Result:", divide(num1, num2))
+    else:
+        print("Invalid input. Please try again.")
+
+    print()  # Print a blank line for better readability
+    
 
