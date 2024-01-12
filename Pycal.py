@@ -30,7 +30,7 @@ create_calculator_banner()
 
 # Main calculator loop
 while True:
-    print("Select operation:")
+    print("[Select operation:]")
     print("1. Add")
     print("2. Subtract")
     print("3. Multiply")
