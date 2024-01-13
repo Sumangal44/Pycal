@@ -37,7 +37,7 @@ while True:
     print("2. Subtract")
     print("3. Multiply")
     print("4. Divide")
-    print("5."power") 
+    print("5."Power") 
     print("0. Exit")
 
     choice = input("Enter your choice: ")
